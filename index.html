@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>LocalStorage and Event Delegation</title>
+    <style>
+        @layer utilities{ 
+            input[type='checkbox']{
+                display: none;
+            }
+            li input + label:before{
+                content: '▢';
+                margin-right: 10px;
+            }
+            li input:checked + label::before{
+                content: '🍔';
+            }
+        }
+    </style>
+</head>
+<body class="bg-[url('image/pexels-valeria-boltneva-827528.jpg')] bg-no-repeat bg-cover">
+
+    <main class="bg-slate-200  w-[250px] h-auto p-[10px] mx-auto mt-[10%] flex flex-col justify-between rounded-lg">
+        <div class="logo bg-[url('image/330-3309459_food-logo-transparent-background-hd-png-download.jpg')] bg-no-repeat bg-cover w-[113px] h-[71px] m-auto mb-[20px]"></div>
+        <h1 class="m-auto text-[1.3rem] font-bold mb-[10px]">Local Tabas</h1>
+        <div class="plates mb-[15px]">
+           <ul>
+
+           </ul>
+        </div>
+        <form action="/index.html" method="post" class="addItems flex justify-between">
+            <input type="text" placeholder="items name.." class="w-[120px] text-[.8rem] pl-[10px] font-bold outline-none rounded-md">
+            <input type="submit" value="+ Add Items" class="border-[1px] bg-slate-500 text-[.9rem] font-semibold px-[6px] rounded-md">
+        </form>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
